@@ -3,6 +3,7 @@ module.exports = function(api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
+      [
       'module-resolver',
       {
         root: ['./src'],
@@ -16,6 +17,7 @@ module.exports = function(api) {
           '@theme': './src/theme',
         }
       }
+    ]
     ]
   };
 };
