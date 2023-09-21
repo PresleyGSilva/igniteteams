@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import  theme  from '@theme/index';
 import {useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto'
 import { Groups } from '@screens/Groups';
+import { Loading } from '@components/Loading';
 
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
   })
   return (
     <ThemeProvider theme={theme}>
-   {fontsloaded ? <Groups /> : <ActivityIndicator />}
+   {fontsloaded ? <Groups /> : <Loading />}
     </ThemeProvider>
   );
   
